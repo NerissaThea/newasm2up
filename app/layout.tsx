@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import {  Poppins } from '@next/font/google';
-import { Exo_2 } from '@next/font/google';
 import Navbar from './navbar';
 import Footer from './footer';
 
@@ -11,11 +10,7 @@ const poppins = Poppins({
   variable: '--font-poppins',
 });
 
-const exo2 = Exo_2({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-exo-2',
-});
+
 
 
 
@@ -36,7 +31,7 @@ export default function RootLayout({
         <link rel="icon" href="/notextlogo.ico" />
       </head>
       <body
-        className={` ${exo2.variable} ${poppins.variable} antialiased`}
+        className={` ${poppins.variable} antialiased`}
       >
         <Navbar /> {/* Thêm Navbar */}
         <main>{children}</main> {/* Nội dung chính */}
@@ -45,3 +40,4 @@ export default function RootLayout({
     </html>
   );
 }
+

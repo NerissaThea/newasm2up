@@ -1,7 +1,7 @@
 /* eslint-disable */
 'use client'
 import axios from 'axios'
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback, useState, useEffect, Suspense } from "react";
 import dynamic from "next/dynamic";
 import { ChevronDown, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import {
@@ -680,7 +680,7 @@ const fetchAddressInfo = async (address: string) => {
   const currentTransactions = selectedEdge ? selectedEdge.transactions.slice(startIndex, endIndex) : [];
 
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
           {/* Header section with wallet address information */}
           <div className="bg-primaryGray p-4 sm:p-6 text-white sm:px-8 lg:px-20 font-exo2">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-2 sm:space-y-0">
@@ -987,6 +987,6 @@ const fetchAddressInfo = async (address: string) => {
           </div>
         )}
       </div>
-    </>
+    </Suspense>
   )
 }

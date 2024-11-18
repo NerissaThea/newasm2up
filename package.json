@@ -30,6 +30,7 @@
     "axios": "^1.7.7",
     "badge": "^0.0.0",
     "bufferutil": "^4.0.8",
+    "utf-8-validate": "^5.0.2",
     "chart.js": "^4.4.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",

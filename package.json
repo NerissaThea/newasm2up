@@ -38,9 +38,9 @@
     "framer-motion": "^11.11.2",
     "lucide-react": "^0.447.0",
     "next": "13.4.0",
-    "react": "18.0.0",
+    "react": "18.2.0",
     "react-chartjs-2": "^5.2.0",
-    "react-dom": "18.0.0",
+    "react-dom": "18.2.0",
     "react-intersection-observer": "^9.13.1",
     "reactflow": "^11.11.4",
     "shadcn-ui": "^0.2.3",
@@ -59,3 +59,4 @@
     "typescript": "^5"
   }
 }
+

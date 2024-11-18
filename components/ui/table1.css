@@ -1,0 +1,52 @@
+/* src/components/ui/table.css */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Hợp nhất các đường viền */
+    margin: 20px 0;
+    /* Khoảng cách xung quanh bảng */
+    font-size: 1em;
+    /* Kích thước font chữ */
+    text-align: left;
+    /* Căn trái cho văn bản */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng cho bảng */
+}
+
+thead {
+    background-color: #1a202c;
+    /* Màu nền xanh đen cho tiêu đề */
+    color: #fbd38d;
+    /* Màu chữ vàng cho tiêu đề */
+}
+
+th,
+td {
+    padding: 12px;
+    /* Padding bên trong ô bảng */
+    border: 1px solid #e2e8f0;
+    /* Đường viền xám nhạt */
+}
+
+tr:hover {
+    background-color: #fbd38d;
+    /* Màu nền vàng khi di chuột qua hàng */
+    color: #1a202c;
+    /* Màu chữ xanh đen khi di chuột */
+}
+
+th {
+    font-weight: bold;
+    /* Chữ đậm cho ô tiêu đề */
+}
+
+/* Thêm một số class cho responsive và cải thiện tính tương thích */
+@media (max-width: 768px) {
+
+    th,
+    td {
+        padding: 8px;
+        /* Giảm padding cho màn hình nhỏ */
+    }
+}

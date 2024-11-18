@@ -1,0 +1,291 @@
+/* Combined Styles */
+/* Tailwind base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for TransactionGraph component */
+
+/* Global styles */
+body {
+    @apply bg-[#1C2128] text-black;
+}
+
+/* ReactFlow styles */
+.react-flow__node {
+    @apply font-sans;
+}
+
+.react-flow__edge-path {
+    stroke: #60a5fa;
+    stroke-width: 2;
+}
+
+.react-flow__edge-text {
+    @apply fill-white text-xs;
+}
+
+.react-flow__attribution {
+    @apply bg-transparent text-gray-400;
+}
+
+/* Custom node styles */
+.circle-node {
+    @apply flex items-center justify-center w-20 h-20 rounded-full bg-orange-400 text-white border-2 border-orange-500 shadow-lg cursor-pointer;
+}
+
+.star-node {
+    @apply flex items-center justify-center w-28 h-28 cursor-pointer;
+}
+
+.star-node svg {
+    @apply fill-yellow-400 stroke-yellow-600;
+}
+
+/* Right panel styles */
+.right-panel {
+    @apply w-1/3 h-full overflow-hidden bg-gray-800 bg-opacity-50 backdrop-blur-sm;
+}
+
+.right-panel-content {
+    @apply h-full overflow-y-auto p-4 space-y-4;
+}
+
+/* Card styles */
+.custom-card {
+    @apply bg-gray-800 border-gray-700;
+}
+
+.custom-card-header {
+    @apply text-white;
+}
+
+/* Input and Select styles */
+.custom-input, .custom-select {
+    @apply bg-gray-700 text-white border-gray-600;
+}
+
+/* Table styles */
+.custom-table {
+    @apply w-full;
+}
+
+.custom-table th {
+    @apply text-left text-gray-300 font-medium py-2 px-4;
+}
+
+.custom-table td {
+    @apply py-2 px-4 border-t border-gray-700;
+}
+
+/* Button styles */
+.custom-button {
+    @apply px-4 py-2 rounded-md transition-colors duration-200;
+}
+
+.custom-button-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white;
+}
+
+.custom-button-secondary {
+    @apply bg-gray-700 hover:bg-gray-600 text-white;
+}
+
+/* Checkbox styles */
+.custom-checkbox {
+    @apply accent-blue-500;
+}
+
+/* Pagination styles */
+.pagination-button {
+    @apply px-3 py-1 rounded-md text-sm font-medium;
+}
+
+.pagination-button-active {
+    @apply bg-blue-600 text-white;
+}
+
+.pagination-button-inactive {
+    @apply text-gray-400 border border-gray-600;
+}
+
+/* Modal styles */
+.modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 backdrop-blur-sm;
+}
+
+.modal-content {
+    @apply bg-gradient-to-br from-indigo-900 to-purple-900 p-6 rounded-lg shadow-lg w-full max-w-2xl;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .right-panel {
+        @apply w-full;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-700;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+}
+
+/* Layer base styles */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --font-quantico: 'Quantico', sans-serif;
+    --font-exo-2: 'Exo 2', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Font classes */
+.font-quantico {
+  font-family: var(--font-quantico);
+}
+
+.font-exo2 {
+  font-family: var(--font-exo-2);
+}
+
+/* Get Started Button */
+.get-started-button {
+  background: radial-gradient(circle at bottom right, #1A3263 0%, #F16821 30%, #FAB95B 60%, #E8E2DB 100%);
+  border: none;
+  padding: 12px 24px;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.get-started-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: inherit;
+  filter: blur(6px);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.get-started-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.get-started-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.ReactFlow__container {
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 125%; /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
